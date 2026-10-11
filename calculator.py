@@ -1,23 +1,13 @@
-def add(a, b):
-            return a + b
+def main():
+    """Entry point for the calculator script.
+    Replace this stub with the actual workflow you want when the script is run directly.
+    """
+    # Example usage – adjust as needed for your application
+    try:
+        result = add(2, 3)  # assumes an `add` function is defined elsewhere in this file
+        print(f"2 + 3 = {result}")
+    except NameError:
+        print("No 'add' function defined; implement your calculator logic here.")
 
-def subtract(a, b):
-            return a - b
-
-def divide(a, b):
-            return a / b
-
-import unittest
-
-class TestCalculator(unittest.TestCase):
-            def test_add(self):
-                            self.assertEqual(add(2, 3), 5)
-
-            def test_subtract(self):
-                            self.assertEqual(subtract(5, 3), 2)
-
-            def test_divide(self):
-                            self.assertEqual(divide(10, 0), 0)
-
-        if __name__ == '__main__':
-                    unittest.main()
+if __name__ == "__main__":
+    main()
