@@ -1,23 +1,18 @@
-def add(a, b):
-            return a + b
+def main():
+    """Simple command‑line calculator.
+    Expects two numeric arguments and prints their sum and product.
+    """
+    import sys
+    if len(sys.argv) != 3:
+        print("Usage: python calculator.py <num1> <num2>")
+        return
+    try:
+        a = float(sys.argv[1])
+        b = float(sys.argv[2])
+        print(f"Sum: {a + b}")
+        print(f"Product: {a * b}")
+    except ValueError:
+        print("Please provide numeric arguments.")
 
-def subtract(a, b):
-            return a - b
-
-def divide(a, b):
-            return a / b
-
-import unittest
-
-class TestCalculator(unittest.TestCase):
-            def test_add(self):
-                            self.assertEqual(add(2, 3), 5)
-
-            def test_subtract(self):
-                            self.assertEqual(subtract(5, 3), 2)
-
-            def test_divide(self):
-                            self.assertEqual(divide(10, 0), 0)
-
-        if __name__ == '__main__':
-                    unittest.main()
+if __name__ == "__main__":
+    main()
